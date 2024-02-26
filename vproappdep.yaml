@@ -23,7 +23,7 @@ spec:
       initContainers:
         - name: init-mydb
           image: busybox
-          command: ['sh','c','unit nslookup vprodb; do echo waiting for mydb; sleep 2; done;']
+          command: ['sh','-c','unit nslookup vprodb; do echo waiting for mydb; sleep 2; done;']
         - name: init-rmc01
           image: busybox
-          command: ['sh','c','unit nslookup vprocache01; do echo waiting for mydb; sleep 2; done;' ]
+          command: ['sh','-c','unit nslookup vprocache01; do echo waiting for mydb; sleep 2; done;' ]
